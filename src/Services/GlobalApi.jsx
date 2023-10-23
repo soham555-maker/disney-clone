@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import axios from "axios";
 
 const movieBaseURL = 'https://api.themoviedb.org/3'
@@ -9,9 +7,4 @@ const getTrendingVideos = axios.get(this.movieBaseURL+'trending/movie/week?api_k
 
 export default {
     getTrendingVideos
-<<<<<<< Updated upstream
 }
->>>>>>> Stashed changes
-=======
-}
->>>>>>> Stashed changes

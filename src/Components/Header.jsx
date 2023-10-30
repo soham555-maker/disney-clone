@@ -38,7 +38,6 @@ export default function Header() {
   return (
 
     <div className=" bg-[#141421] flex justify-between items-center p-5 ">
-      modified
       <div className="flex item-centre gap-2 md:gap-8">
         <img
           src={logo}

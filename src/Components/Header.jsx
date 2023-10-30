@@ -36,12 +36,14 @@ export default function Header() {
   };
 
   return (
+
     <div className=" bg-[#141421] flex justify-between items-center p-5 ">
-      <div className="flex item-centre gap-8">
+      modified
+      <div className="flex item-centre gap-2 md:gap-8">
         <img
           src={logo}
           alt="Disney+hostar"
-          className="w-[80px] md:w-[115px] object-cover cursor-pointer"
+          className="w-[100px] md:w-[115px] object-cover cursor-pointer"
         />
         <div className="hidden md:flex item-centre gap-8">
           {symb.map((item) => (

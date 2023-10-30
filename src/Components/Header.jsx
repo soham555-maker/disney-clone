@@ -43,7 +43,7 @@ export default function Header() {
           alt="Disney+hostar"
           className="w-[80px] md:w-[115px] object-cover cursor-pointer"
         />
-        <div className="hidden md:flex item-centre min-[995]:gap-8 ">
+        <div className="hidden md:flex item-centre gap-8">
           {symb.map((item) => (
             <Headeritem key={item.id} name={item.name} Icon={item.icon} />
           ))}

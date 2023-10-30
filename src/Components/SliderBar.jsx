@@ -33,13 +33,15 @@ export default function SliderBar() {
   };
   return (
     <div className="text-white">
-        <HiChevronLeft className="hidden md:block absolute mt-[20vh] text-[5vmin] ml-[1vmin]" onClick={()=> prevMovie(elementImg.current)}/>
-        <HiChevronRight className="hidden md:block absolute mt-[20vh] right-0 text-[5vmin] mr-[1vmin]" onClick={()=> nextMovie(elementImg.current)}/>
+        <HiChevronLeft className="hidden md:block absolute mt-[20vh] text-[5vmin] ml-[1vmin] cursor-pointer" onClick={()=> prevMovie(elementImg.current)}/>
+        <HiChevronRight className="hidden md:block absolute mt-[20vh] right-0 text-[5vmin] mr-[1vmin] cursor-pointer" onClick={()=> nextMovie(elementImg.current)}/>
       {/* <p>{IMG_BASE_URL + trendingMovies[0]}</p> */}
       {/* {trendingMovies.map((item, index)=>(
         <img src={IMG_BASE_URL + item.backdrop_path} alt="..." />
       ))} */}
+
       <div className="flex  w-full p-8 md:px-16 py-4 md:scrollbar-none scrollbar-hide overflow-x-auto md:scroll-smooth" ref={elementImg}>
+
         {trendingMovies.map((item, index) => (
             <img
             key={index}

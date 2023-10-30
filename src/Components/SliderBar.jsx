@@ -39,11 +39,7 @@ export default function SliderBar() {
       {/* {trendingMovies.map((item, index)=>(
         <img src={IMG_BASE_URL + item.backdrop_path} alt="..." />
       ))} */}
-<<<<<<< Updated upstream
-      <div className="flex w-full px-16 py-4 scrollbar-none scrollbar-hide overflow-x-auto scroll-smooth" ref={elementImg}>
-=======
       <div className="flex  w-full p-8 md:px-16 py-4 md:scrollbar-none scrollbar-hide overflow-x-auto md:scroll-smooth" ref={elementImg}>
->>>>>>> Stashed changes
         {trendingMovies.map((item, index) => (
             <img
             key={index}

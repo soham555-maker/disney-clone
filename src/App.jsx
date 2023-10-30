@@ -4,6 +4,9 @@ import Header from "./Components/Header";
 import SliderBar from "./Components/SliderBar";
 import ProdHouse from "./Components/ProdHouse";
 
+import RenderGeneraList from "./Components/RenderGeneraList";
+
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -12,6 +15,8 @@ function App() {
       <Header />
       <SliderBar />
       <ProdHouse />
+      <RenderGeneraList />
+
     </div>
   );
 }

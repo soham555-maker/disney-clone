@@ -13,7 +13,7 @@ export default function SliderBar() {
   }, []);
   const getTrendingVideos = () => {
     GlobalApi.getTrendingVideos.then((resp) => {
-      console.log(resp.data.results);
+      // console.log(resp.data.results);
       setTrendingMovies(resp.data.results);
     //   setLoded(true);
     });
@@ -25,12 +25,11 @@ export default function SliderBar() {
 //     setIndex(index === 0 ? 19 : index - 1);
 //   };
   const IMG_BASE_URL = "http://image.tmdb.org/t/p/original";
-  const WIDTH = window.innerWidth;
   const nextMovie = (ele) => {
-    ele.scrollLeft += WIDTH -110;
+    ele.scrollLeft += window.innerWidth -110;
   };
   const prevMovie = (ele) => {
-    ele.scrollLeft -= WIDTH -110;
+    ele.scrollLeft -= window.innerWidth -110;
   };
   return (
     <div className="text-white">
@@ -40,12 +39,15 @@ export default function SliderBar() {
       {/* {trendingMovies.map((item, index)=>(
         <img src={IMG_BASE_URL + item.backdrop_path} alt="..." />
       ))} */}
-      <div className="flex w-full px-16 py-4 scrollbar-none scrollbar-hide md:overflow-x-auto scroll-smooth" ref={elementImg}>
+
+      <div className="flex  w-full p-8 md:px-16 py-4 md:scrollbar-none scrollbar-hide overflow-x-auto md:scroll-smooth" ref={elementImg}>
+
         {trendingMovies.map((item, index) => (
             <img
+            key={index}
             src={IMG_BASE_URL + item.backdrop_path}
             alt="..."
-            className="min-w-full md:h-[40vh] object-cover object-left-top rounded-2xl mr-5 hover:border-[3px] border-grey-400 transition-all duration-100 ease-in" ref={eleContainer}
+            className="min-w-full md:h-[40vh] object-cover object-left-top rounded-2xl mr-5 hover:border-[3px] cursor-pointer border-grey-400 transition-all duration-100 ease-in" ref={eleContainer}
           />
         ))}
         {/* {loded && (

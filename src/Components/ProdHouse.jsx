@@ -39,10 +39,12 @@ export default function ProdHouse() {
     },
   ];
   return (
-    <div className="flex gap-2 md:gap-5 p-2 px-5 md:px-16">
+
+    <div className="flex gap-2 md:gap-5 p-2 px-5 md:px-16 mb-9">
       {prodHouseList.map((item, index) => (
-        <div className="border-[2px] border-grey rounded-xl hover:scale-110 cursor-pointer transition-all duration-300 ease-in-out relative shadow-xl shadow-gray-800">
-           <video
+        <div key={index} className="border-[2px] border-grey rounded-xl hover:scale-110 cursor-pointer transition-all duration-300 ease-in-out relative shadow-xl shadow-gray-800">
+          <video
+
             src={item.video}
             autoPlay
             loop
